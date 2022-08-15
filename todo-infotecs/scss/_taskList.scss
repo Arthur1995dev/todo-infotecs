@@ -1,0 +1,44 @@
+.task_list {
+	display: block;
+	width: 25%;
+	height: 100%;
+	background-color: rgba(146, 183, 227, 0.79);
+	box-sizing: border-box;
+	position: relative;
+	.tasks {
+		width: 100%;
+		height: 100%;
+		padding: 0;
+		margin: 0;
+		position: relative;
+		overflow-y: scroll;
+	}
+	.resize {
+		position: absolute;
+		height: 100%;
+		width: 2px;
+		right: 0;
+		top: 0;
+		background: lightgray;
+		cursor: e-resize;
+	}
+	.reset {
+		width: 95%;
+		height: 20px;
+		border: none;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.task_list,
+	.task_edit {
+		width: 100%;
+	}
+	.task_list {
+		max-height: 300px;
+	}
+}

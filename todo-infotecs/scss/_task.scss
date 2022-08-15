@@ -1,0 +1,49 @@
+.task {
+	width: 100%;
+	height: 50px;
+	background-color: rgba(141, 144, 149, 0.88);
+	margin-bottom: 5px;
+	@extend %flex-between;
+	.task_title {
+		width: 60%;
+		padding-left: 5px;
+		pointer-events: none;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	button {
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		margin: 0;
+		margin-right: 10px;
+		border: 1px solid lightgray;
+		.fa-check {
+			color: #32f307;
+			pointer-events: none;
+		}
+		.fa-xmark {
+			color: red;
+			pointer-events: none;
+		}
+		.fa-play {
+			color: blue;
+			pointer-events: none;
+		}
+	}
+}
+.selected_task {
+	box-shadow: inset 0 0 5px 5px #d23844;
+}
+.play {
+	background-color: rgba(25, 115, 219, 0.79);
+}
+.complited {
+	background: #53e034;
+}
+
+.hidden {
+	display: none;
+}
+

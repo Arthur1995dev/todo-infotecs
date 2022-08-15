@@ -1,0 +1,295 @@
+.task_list {
+  display: block;
+  width: 25%;
+  height: 100%;
+  background-color: rgba(146, 183, 227, 0.79);
+  box-sizing: border-box;
+  position: relative;
+}
+.task_list .tasks {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  overflow-y: scroll;
+}
+.task_list .resize {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  right: 0;
+  top: 0;
+  background: lightgray;
+  cursor: e-resize;
+}
+.task_list .reset {
+  width: 95%;
+  height: 20px;
+  border: none;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .task_list,
+.task_edit {
+    width: 100%;
+  }
+  .task_list {
+    max-height: 300px;
+  }
+}
+.task_edit {
+  display: block;
+  width: 75%;
+  height: 100%;
+  position: relative;
+  background-color: rgba(146, 183, 227, 0.79);
+}
+.task_edit .form_edit {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.task_edit .form_edit h2 {
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  color: black;
+}
+.task_edit .form_edit .title_edit_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+.task_edit .form_edit .title_edit_container label {
+  min-width: 100%;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.task_edit .form_edit .title_edit_container .input_title {
+  width: 50%;
+  height: 30px;
+  margin-left: 50px;
+  padding: 0;
+  margin-bottom: 30px;
+  outline: none;
+  border: none;
+}
+.task_edit .form_edit .title_edit_container .title_submit {
+  width: 200px;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: black;
+}
+.task_edit .form_edit .description_edit_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.task_edit .form_edit .description_edit_container label {
+  min-width: 100%;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.task_edit .form_edit .description_edit_container .description_task {
+  width: 80%;
+  outline: none;
+  border: none;
+  height: 200px;
+  margin-bottom: 30px;
+}
+.task_edit .form_edit .description_edit_container .description_submit {
+  width: 200px;
+  height: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  color: black;
+}
+.task_edit .form_edit .form-menu_container {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  border-top: 1px solid lightgray;
+}
+.task_edit .form_edit .form-menu_container .task_menu {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+.task_edit .form_edit .form-menu_container .task_menu .menu_item {
+  width: 20%;
+  height: 50px;
+}
+.task_edit .form_edit .form-menu_container .task_menu .menu_item button {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: none;
+}
+.task_edit .form_edit .form-menu_container .task_menu .input_add {
+  width: 50%;
+  height: 50px;
+}
+.task_edit .form_edit .form-menu_container .task_menu .input_add input {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type=text]::placeholder,
+textarea::placeholder {
+  padding-left: 10px;
+}
+
+.button {
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 2px 2px rgba(25, 115, 219, 0.79);
+}
+
+.button:active {
+  box-shadow: inset 0 0 10px 10px rgba(25, 115, 219, 0.79);
+}
+
+@media (max-width: 830px) {
+  .task_edit .form_edit .title_edit_container {
+    flex-direction: column;
+  }
+  .task_edit .form_edit .title_edit_container .input_title,
+.task_edit .form_edit .title_edit_container .title_submit {
+    margin: 0;
+  }
+  .task_edit .form_edit .title_edit_container .input_title {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .task_edit {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid lightgray;
+  }
+  .description_submit {
+    margin-bottom: 120px;
+  }
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+}
+body main {
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 700px;
+  font-family: "Roboto", sans-serif;
+}
+
+@media (max-width: 768px) {
+  body main {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+.task_edit .form_edit .title_edit_container label, .task_edit .form_edit .title_edit_container .input_title, .task_edit .form_edit .title_edit_container .title_submit, .task_edit .form_edit .description_edit_container label, .task_edit .form_edit .description_edit_container .description_task, .task_edit .form_edit .description_edit_container .description_submit, .task_edit .form_edit .form-menu_container .task_menu .menu_item button, .task_edit .form_edit .form-menu_container .task_menu .input_add input {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.task_edit .form_edit h2 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 26px;
+}
+
+.task_edit .form_edit h2, body main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(141, 144, 149, 0.88);
+  margin-bottom: 5px;
+}
+.task .task_title {
+  width: 60%;
+  padding-left: 5px;
+  pointer-events: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.task button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  border: 1px solid lightgray;
+}
+.task button .fa-check {
+  color: #32f307;
+  pointer-events: none;
+}
+.task button .fa-xmark {
+  color: red;
+  pointer-events: none;
+}
+.task button .fa-play {
+  color: blue;
+  pointer-events: none;
+}
+
+.selected_task {
+  box-shadow: inset 0 0 5px 5px #d23844;
+}
+
+.play {
+  background-color: rgba(25, 115, 219, 0.79);
+}
+
+.complited {
+  background: #53e034;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */
