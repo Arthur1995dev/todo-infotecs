@@ -1,0 +1,47 @@
+body {
+	width: 100%;
+	margin: 0 auto;
+	main {
+		@extend %flex-centr;
+		flex-wrap: nowrap;
+		width: 100%;
+		height: 700px;
+		font-family: 'Roboto', sans-serif;
+	}
+}
+@media (max-width: 768px) {
+	body {
+		main {
+			flex-direction: column;
+			height: 100%;
+		}
+	}
+}
+%roboto-regular {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+}
+%roboto-bold {
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 26px;
+}
+//---------------
+//Flex
+%flex-centr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+//---------------
